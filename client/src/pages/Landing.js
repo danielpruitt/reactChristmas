@@ -1,0 +1,279 @@
+import React, { Component } from "react";
+import { Col, Row, Container } from "../components/Grid";
+// import { Card } from "../components/Card";
+import { FormBtn, Input, TextArea } from "../components/Form";
+import { List, ListItem } from "../components/List";
+
+// import API and Link
+import API from "../utils/API";
+import { Link } from "react-router-dom";
+
+
+class Gifts extends Component {
+    state = {
+        giftList: [],
+        gift: "",
+        couple: "",
+        synopsis: ""
+    };
+
+    // check component mounting
+    componentDidMount() {
+        this.loadGifts();
+    };
+
+    loadGifts = () => {
+        API.getGifts()
+            .then(res =>
+
+                this.setState({ giftList: res.data, gift: "", couple: "", synoposis: "" })
+
+            )
+            .catch(err => console.log(err + "Error in loadGifts()"))
+    };
+
+    // delete Gift from the DB
+    deleteGift = id => {
+        API.deleteGift(id)
+            .then(res => this.loadGifts())
+            .catch(err => console.log(err + "Error in deleteGift()"));
+    };
+
+    // handle changes
+    handleInputChange = event => {
+        event.preventDefault();
+        const { name, value } = event.target;
+        this.setState({
+            [name]: value
+        });
+
+
+    };
+
+    //handle the checkboxes
+    handleInputCheck = (event) => {
+        const target = event.target;
+        const name = target.name;
+        console.log(name)
+        this.setState({
+            couple: name
+        });
+    }
+
+
+    // handle form submit
+    handleFormSubmit = event => {
+        event.preventDefault();
+        
+        if (this.state.gift && this.state.couple) {
+            API.saveGift({
+                gift: this.state.gift,
+                couple: this.state.couple,
+                synopsis: this.state.synopsis
+            })
+                .then(res => this.loadGifts())
+                .catch(err => console.log(err + " Error in the form submit"))
+        }
+    }
+
+    render() {
+        return (
+            <div>
+                <Container>
+                    <Row>
+                        <Col size="s12">
+                            <Input
+                                value={this.state.gift}
+                                onChange={this.handleInputChange}
+                                name="gift"
+                                placeholder="Gift (required)"
+                            />
+
+                        </Col>
+
+
+                    </Row>
+
+                    <Row>
+                        <Col size="s12">
+                            <TextArea
+                                value={this.state.synopsis}
+                                onChange={this.handleInputChange}
+                                name="synopsis"
+                                placeholder="Synopsis"
+                            />
+
+                        </Col>
+
+
+                    </Row>
+                    <Row>
+                        
+                        <Col size="s6">
+                            <label>
+                                <input
+                                    name="Mima"
+                                    type="checkbox"
+                                    onChange={this.handleInputCheck} />
+                                <span>Mima</span>
+                            </label>
+                            <br />
+                            <label>
+                                <input
+                                    name="Mary and Bruce"
+                                    type="checkbox"
+                                    onChange={this.handleInputCheck} />
+                                <span>Mary and Bruce</span>
+                            </label>
+                            <br />
+                            <label>
+                                <input
+                                    name="Cathy and Nick"
+                                    type="checkbox"
+                                    onChange={this.handleInputCheck} />
+                                <span>Cathy and Nick</span>
+                            </label>
+                            <br />
+                            <label>
+                                <input
+                                    name="Susan and Allan"
+                                    type="checkbox"
+                                    onChange={this.handleInputCheck} />
+                                <span>Susan and Allan</span>
+                            </label>
+                            <br />
+                            <label>
+                                <input
+                                    name="Christella and Ryan"
+                                    type="checkbox"
+                                    onChange={this.handleInputCheck} />
+                                <span>Christella and Ryan</span>
+                            </label>
+                            <br />
+                            <label>
+                                <input
+                                    name="Rachel and Daniel"
+                                    type="checkbox"
+                                    onChange={this.handleInputCheck} />
+                                <span>Rachel and Daniel</span>
+                            </label>
+                            <br />
+                            <label>
+                                <input
+                                    name="Tiffany and Andrew"
+                                    type="checkbox"
+                                    onChange={this.handleInputCheck} />
+                                <span>Tiffany and Andrew</span>
+                            </label>
+                            <br />
+
+                        </Col>
+
+                        <Col size="s6">
+                    
+                            <label>
+                                <input
+                                    name="Melissa and Ben"
+                                    type="checkbox"
+                                    onChange={this.handleInputCheck} />
+                                <span>Melissa and Ben</span>
+                            </label>
+                            <br />
+                            <label>
+                                <input
+                                    name="Mattie"
+                                    type="checkbox"
+                                    onChange={this.handleInputCheck} />
+                                <span>Mattie</span>
+                            </label>
+                            <br />
+                            <label>
+                                <input
+                                    name="Tess"
+                                    type="checkbox"
+                                    onChange={this.handleInputCheck} />
+                                <span>Tess</span>
+                            </label>
+                            <br />
+                            <label>
+                                <input
+                                    name="Thomas"
+                                    type="checkbox"
+                                    onChange={this.handleInputCheck} />
+                                <span>Thomas</span>
+                            </label>
+                            <br />
+                            <label>
+                                <input
+                                    name="Kira"
+                                    type="checkbox"
+                                    onChange={this.handleInputCheck} />
+                                <span>Kira</span>
+                            </label>
+                            <br />
+                            <label>
+                                <input
+                                    name="Ethan"
+                                    type="checkbox"
+                                    onChange={this.handleInputCheck} />
+                                <span>Ethan</span>
+                            </label>
+
+                        </Col>
+
+                    </Row>
+                    <Row>
+                        <Col size="s12">
+                            <FormBtn
+                                disabled={!(this.state.couple && this.state.gift)}
+                                onClick={this.handleFormSubmit}
+                            >
+                                Submit Gift
+                        </FormBtn>
+                        </Col>
+                    </Row>
+                </Container>
+                <Container>
+                    <Row>
+                        <Col size="s12">
+                            
+
+
+                        </Col>
+
+                    </Row>
+
+                </Container>
+
+                <Container>
+                    <Row>
+                        <Col size="s12">
+                            {this.state.giftList.length ? (
+                                <List>
+                                    {this.state.giftList.map(gift => (
+                                        <Link to={"/gifts/" + gift._id}>
+                                            <ListItem key={gift._id}>
+                                                <strong>
+                                                
+                                                    {gift.couple} would like a {gift.gift}
+                                                </strong>
+
+                                            </ListItem>
+                                        </Link>
+                                    ))}
+                                </List>
+                            
+                            ) : (
+                                    <h3>There are no gifts yet!</h3>
+                                )
+                            }
+                        </Col>
+                    </Row>
+
+                </Container>
+            </div>
+        )
+    }
+}
+
+export default Gifts;
