@@ -187,6 +187,14 @@ class Gifts extends Component {
                             <br />
                             <label>
                                 <input
+                                    name="Allison and Andrew"
+                                    type="checkbox"
+                                    onChange={this.handleInputCheck} />
+                                <span>Allison and Andrew</span>
+                            </label>
+                            <br />
+                            <label>
+                                <input
                                     name="Mattie"
                                     type="checkbox"
                                     onChange={this.handleInputCheck} />
