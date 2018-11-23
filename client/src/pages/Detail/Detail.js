@@ -30,7 +30,7 @@ class Detail extends Component {
                 <Row>
                     <Col size="s12">
                         <article>
-                            <h5>Synopsis</h5>
+                            <h5>Details</h5>
                             <p>
                                 {this.state.gift.synopsis}
                             </p>

@@ -10,17 +10,11 @@ mongoose.connect(
 
 const giftSeed = [
     {
-        gift: "Nintendo Switch",
-        couple: "Daniel and Rachel",
-        synopsis:"Let's be real, it's for Daniel",
+        gift: "",
+        couple: "",
+        synopsis:"",
         date: new Date(Date.now())
-    },
-    {
-        gift: "A nice trendy coat",
-        couple: "Rachel and Daniel",
-        synopsis:"Rachel needs a coat and not to be cold",
-        date: new Date(Date.now())
-    },
+    }
 ]
 db.Gift
     .remove({})

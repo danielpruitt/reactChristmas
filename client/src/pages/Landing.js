@@ -3,7 +3,7 @@ import { Col, Row, Container } from "../components/Grid";
 // import { Card } from "../components/Card";
 import { FormBtn, Input, TextArea } from "../components/Form";
 import { List, ListItem } from "../components/List";
-
+import "./Landing.css";
 // import API and Link
 import API from "../utils/API";
 import { Link } from "react-router-dom";
@@ -74,15 +74,21 @@ class Gifts extends Component {
                 .then(res => this.loadGifts())
                 .catch(err => console.log(err + " Error in the form submit"))
         }
+        this.setState({
+            synopsis:""
+        })
     }
 
     render() {
         return (
             <div>
-                <Container>
+                
+                <Container className="z-depth-3">
+                
                     <Row>
                         <Col size="s12">
                             <Input
+                                type="text"
                                 value={this.state.gift}
                                 onChange={this.handleInputChange}
                                 name="gift"
@@ -100,7 +106,7 @@ class Gifts extends Component {
                                 value={this.state.synopsis}
                                 onChange={this.handleInputChange}
                                 name="synopsis"
-                                placeholder="Synopsis"
+                                placeholder="Details that others may need to know about. (websites, sizes, etc.)"
                             />
 
                         </Col>
@@ -233,6 +239,7 @@ class Gifts extends Component {
                         </Col>
                     </Row>
                 </Container>
+            
                 <Container>
                     <Row>
                         <Col size="s12">
