@@ -23,6 +23,7 @@ export const Instructions = () => (
                     <h4>How to use:</h4>
                     <h5>
                         Write in what gift you and your spouse wants and then click your names. A description can be added if you want. Then hit submit and your gift is saved! Submissions can be click on to see the details. If this is a bit confusing, call or text Daniel.
+                        If you need to edit or delete an item or items, let Daniel know.
                     </h5>
                 </Col>
 
