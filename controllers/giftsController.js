@@ -15,6 +15,13 @@ module.exports = {
             .then(dbModel => res.json(dbModel))
             .catch(err => res.status(422).json(err));
     },
+    findByCouple: function (req, res) {
+        db.Gift
+            .findByCouple(req.params.couple)
+            .then(dbModel => res.json(dbModel))
+            .catch(err => res.status(422).json(err));
+    },
+    
     create: function (req, res) {
         db.Gift
             .create(req.body)

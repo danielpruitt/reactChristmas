@@ -16,5 +16,8 @@ export default {
     // Saves a Gift to the database
     saveGift: function (giftData) {
         return axios.post("/api/gifts", giftData);
+    },
+    getCouple: function(couple){
+        return axios.get("/api/gifts/" + couple)
     }
 };

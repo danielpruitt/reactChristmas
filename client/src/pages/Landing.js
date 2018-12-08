@@ -3,11 +3,11 @@ import { Col, Row, Container } from "../components/Grid";
 // import { Card } from "../components/Card";
 import { FormBtn, Input, TextArea } from "../components/Form";
 import { List, ListItem } from "../components/List";
+import {CoupleBtn} from "../components/Button";
 import "./Landing.css";
 // import API and Link
 import API from "../utils/API";
 import { Link } from "react-router-dom";
-
 
 class Gifts extends Component {
     state = {
@@ -20,16 +20,23 @@ class Gifts extends Component {
     // check component mounting
     componentDidMount() {
         this.loadGifts();
+
     };
 
     loadGifts = () => {
         API.getGifts()
             .then(res =>
 
-                this.setState({ giftList: res.data, gift: "", couple: "", synoposis: "" })
+                this.setState({
+                    giftList: res.data,
+                    gift: "",
+                    couple: "",
+                    synoposis: ""
+                })
 
             )
             .catch(err => console.log(err + "Error in loadGifts()"))
+
     };
 
     // delete Gift from the DB
@@ -64,7 +71,7 @@ class Gifts extends Component {
     // handle form submit
     handleFormSubmit = event => {
         event.preventDefault();
-        
+
         if (this.state.gift && this.state.couple) {
             API.saveGift({
                 gift: this.state.gift,
@@ -75,16 +82,17 @@ class Gifts extends Component {
                 .catch(err => console.log(err + " Error in the form submit"))
         }
         this.setState({
-            synopsis:""
+            synopsis: ""
         })
     }
+
 
     render() {
         return (
             <div>
-                
+
                 <Container className="z-depth-3">
-                
+
                     <Row>
                         <Col size="s12">
                             <Input
@@ -114,7 +122,7 @@ class Gifts extends Component {
 
                     </Row>
                     <Row>
-                        
+
                         <Col size="s6">
                             <label>
                                 <input
@@ -176,7 +184,7 @@ class Gifts extends Component {
                         </Col>
 
                         <Col size="s6">
-                    
+
                             <label>
                                 <input
                                     name="Melissa and Ben"
@@ -247,11 +255,11 @@ class Gifts extends Component {
                         </Col>
                     </Row>
                 </Container>
-            
+
                 <Container>
                     <Row>
                         <Col size="s12">
-                            
+
 
 
                         </Col>
@@ -259,33 +267,67 @@ class Gifts extends Component {
                     </Row>
 
                 </Container>
-
                 <Container>
                     <Row>
-                        <Col size="s12">
-                            {this.state.giftList.length ? (
-                                <List>
-                                    {this.state.giftList.map(gift => (
-                                        <Link to={"/gifts/" + gift._id}>
-                                            <ListItem key={gift._id}>
-                                                <strong>
-                                                
-                                                    {gift.couple} would like a {gift.gift}
-                                                </strong>
-
-                                            </ListItem>
-                                        </Link>
-                                    ))}
-                                </List>
+                        <Col size="s6">
+                            <List>
+                                <ListItem >
+                                    <Link to={"/Mima"}><strong>Mima</strong> </Link>
+                                </ListItem>
+                                <ListItem>
+                                    <Link to={"/MaryAndBruce"}><strong>Mary and Bruce</strong> </Link>
+                                </ListItem>
+                                <ListItem>
+                                    <Link to={"/CathyAndNick"}><strong>Cathy and Nick</strong> </Link>
+                                </ListItem>
+                                <ListItem>
+                                    <Link to={"/SusanAndAllan"}><strong>Susan and Allan</strong> </Link>
+                                </ListItem>
+                                <ListItem>
+                                    <Link to={"/ChristellaAndRyan"}><strong>Christella and Ryan</strong> </Link>
+                                </ListItem>
+                                <ListItem>
+                                    <Link to={"/RachelAndDaniel"}><strong>Rachel and Daniel</strong> </Link>
+                                </ListItem>
+                                <ListItem>
+                                    <Link to={"/TiffanyAndAndrew"}><strong>Tiffany and Andrew</strong> </Link>
+                                </ListItem>
+                                
+                            </List>
                             
-                            ) : (
-                                    <h3>There are no gifts yet!</h3>
-                                )
-                            }
+                        </Col>
+                        <Col size="s6">
+                            <List>
+                                <ListItem>
+                                    <Link to={"/MelissaAndBen"}><strong>Melissa and Ben</strong> </Link>
+                                </ListItem>
+                                <ListItem>
+                                    <Link to={"/AllisonAndAndrew"}><strong>Allison and Andrew</strong> </Link>
+                                </ListItem>
+                                <ListItem>
+                                    <Link to={"/Mattie"}><strong>Mattie</strong> </Link>
+                                </ListItem> 
+                                <ListItem>
+                                    <Link to={"/Tess"}><strong>Tess</strong> </Link>
+                                </ListItem>
+                                <ListItem>
+                                    <Link to={"/Thomas"}><strong>Thomas</strong> </Link>
+                                </ListItem>
+                                <ListItem>
+                                    <Link to={"/Kira"}><strong>Kira</strong> </Link>
+                                </ListItem>
+                                <ListItem>
+                                    <Link to={"/Ethan"}><strong>Ethan</strong> </Link>
+                                </ListItem>
+                            
+                                
+                            </List>
+                            
                         </Col>
                     </Row>
-
                 </Container>
+
+
             </div>
         )
     }

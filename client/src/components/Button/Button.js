@@ -1,7 +1,7 @@
 import React from "react";
 
-export const Couplebtn = (props) => (
+export const CoupleBtn = (props) => (
     <div>
-        <a className="btn" value={props.value}/>
+        <a className="btn" value={props.value} />
     </div>
 )
