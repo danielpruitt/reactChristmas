@@ -5,6 +5,10 @@ body {
   font-family: 'Mountains of Christmas', cursive;
   font-weight: 1000
 }
+
+h3 {
+  color:green
+}
 .container {
   background-color: white
 }

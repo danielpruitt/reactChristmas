@@ -43,13 +43,14 @@ class SusanAndAllan extends Component {
                 <Container>
                     <Row>
                         <Col size="s12">
+                        <h3 className="center">Susan and Allan</h3>
                             {this.state.giftList.length ? (
                                 <List>
                                     {this.state.giftList.map(gift => (
                                         <Link to={"/gifts/" + gift._id}>
                                             <ListItem key={gift._id}>
                                                 <strong>
-                                                    {gift.couple} would like a {gift.gift}
+                                                    {gift.gift}
                                                 </strong>
 
                                             </ListItem>

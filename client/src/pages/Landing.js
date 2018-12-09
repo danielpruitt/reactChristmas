@@ -3,7 +3,7 @@ import { Col, Row, Container } from "../components/Grid";
 // import { Card } from "../components/Card";
 import { FormBtn, Input, TextArea } from "../components/Form";
 import { List, ListItem } from "../components/List";
-import {CoupleBtn} from "../components/Button";
+import { CoupleBtn } from "../components/Button";
 import "./Landing.css";
 // import API and Link
 import API from "../utils/API";
@@ -269,7 +269,7 @@ class Gifts extends Component {
                 </Container>
                 <Container>
                     <Row>
-                        <Col size="s6">
+                        <Col size="s4">
                             <List>
                                 <ListItem >
                                     <Link to={"/Mima"}><strong>Mima</strong> </Link>
@@ -286,18 +286,17 @@ class Gifts extends Component {
                                 <ListItem>
                                     <Link to={"/ChristellaAndRyan"}><strong>Christella and Ryan</strong> </Link>
                                 </ListItem>
+                            </List>
+                        </Col>
+                        
+                        <Col size="s4">
+                            <List>
                                 <ListItem>
                                     <Link to={"/RachelAndDaniel"}><strong>Rachel and Daniel</strong> </Link>
                                 </ListItem>
                                 <ListItem>
                                     <Link to={"/TiffanyAndAndrew"}><strong>Tiffany and Andrew</strong> </Link>
                                 </ListItem>
-                                
-                            </List>
-                            
-                        </Col>
-                        <Col size="s6">
-                            <List>
                                 <ListItem>
                                     <Link to={"/MelissaAndBen"}><strong>Melissa and Ben</strong> </Link>
                                 </ListItem>
@@ -306,7 +305,12 @@ class Gifts extends Component {
                                 </ListItem>
                                 <ListItem>
                                     <Link to={"/Mattie"}><strong>Mattie</strong> </Link>
-                                </ListItem> 
+                                </ListItem>
+                            </List>
+                        </Col>
+
+                        <Col size="s4">
+                            <List>
                                 <ListItem>
                                     <Link to={"/Tess"}><strong>Tess</strong> </Link>
                                 </ListItem>
@@ -319,10 +323,7 @@ class Gifts extends Component {
                                 <ListItem>
                                     <Link to={"/Ethan"}><strong>Ethan</strong> </Link>
                                 </ListItem>
-                            
-                                
                             </List>
-                            
                         </Col>
                     </Row>
                 </Container>
