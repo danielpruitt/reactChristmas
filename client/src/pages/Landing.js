@@ -3,7 +3,6 @@ import { Col, Row, Container } from "../components/Grid";
 // import { Card } from "../components/Card";
 import { FormBtn, Input, TextArea } from "../components/Form";
 import { List, ListItem } from "../components/List";
-import { CoupleBtn } from "../components/Button";
 import "./Landing.css";
 // import API and Link
 import API from "../utils/API";
@@ -14,7 +13,8 @@ class Gifts extends Component {
         giftList: [],
         gift: "",
         couple: "",
-        synopsis: ""
+        synopsis: "",
+        purchased: false
     };
 
     // check component mounting
@@ -31,7 +31,8 @@ class Gifts extends Component {
                     giftList: res.data,
                     gift: "",
                     couple: "",
-                    synoposis: ""
+                    synoposis: "",
+                    purchased:false
                 })
 
             )

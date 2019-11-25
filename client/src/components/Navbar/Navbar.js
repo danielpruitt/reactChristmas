@@ -6,9 +6,9 @@ export const Navbar = () => (
 
         <div className="navbar-fixed z-depth-3">
             <nav>
-                <div className="nav-wrapper red accent-4 custFont">
-                    <a href="/" className="brand-logo center green-text text-darken-4 hide-on-med-and-down"><strong>Yay Christmas!</strong></a>
-                    <ul className=" white green-text text-darken-4 custFont">
+                <div className="nav-wrapper red accent-4 ">
+                    <a href="/" className="brand-logo center green-text text-darken-4 hide-on-med-and-down"><strong>Christmas Lists</strong></a>
+                    <ul className=" white green-text text-darken-4 ">
                         <li>
                         <a className="green-text text-darken-4 flow-text" href="/"><small>Home</small></a>
                         </li>

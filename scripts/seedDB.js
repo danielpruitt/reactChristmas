@@ -13,7 +13,8 @@ const giftSeed = [
         gift: "",
         couple: "",
         synopsis:"",
-        date: new Date(Date.now())
+        date: new Date(Date.now()),
+        purchased:false
     }
 ]
 db.Gift

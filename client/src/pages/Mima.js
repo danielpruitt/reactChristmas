@@ -1,9 +1,7 @@
 import React, { Component } from "react";
 import { Col, Row, Container } from "../components/Grid";
-// import { Card } from "../components/Card";
 import { List, ListItem } from "../components/List";
 import "./Landing.css";
-// import API and Link
 import API from "../utils/API";
 import { Link } from "react-router-dom";
 
@@ -23,17 +21,27 @@ class Mima extends Component {
     //function to load gifts for the specific couple
     loadGifts() {
         API.getGifts()
-
             .then(res => {
                 const newArr = res.data.filter(e => e.couple === "Mima");
                 this.setState({
                     giftList: newArr
-                })
-            }
+                });
+                console.log(this.state.giftList)
+            });
+    };
 
-            )
+    handleInputCheck = (event) => {
+        event.preventDefault();
+        const target = event.target;
+        let name = target.name;
+        let purchased = target.checked;
 
-
+        API.updateGift({
+            _id: name,
+            purchased:purchased
+        })
+        .then(res => this.loadGifts())
+        .catch(err => console.log(err, ' not real error handling'))
     };
 
     render() {
@@ -43,18 +51,59 @@ class Mima extends Component {
                 <Container>
                     <Row>
                         <Col size="s12">
-                        <h3 className="center">Mima</h3>
+                            <h3 className="center">Mima</h3>
                             {this.state.giftList.length ? (
                                 <List>
                                     {this.state.giftList.map(gift => (
-                                        <Link to={"/gifts/" + gift._id}>
+                                        <div key={gift._id} >
+
                                             <ListItem key={gift._id}>
-                                                <strong>
-                                                    {gift.gift}
-                                                </strong>
+
+                                                <Row>
+                                                    <Col size='s8'>
+                                                        <Link to={"/gifts/" + gift._id}>
+                                                            <strong className={gift.purchased ? 'purchased' : 'not-purchased'}>
+                                                                {gift.gift}
+                                                            </strong>
+                                                        </Link>
+                                                    </Col>
+                                                    {gift.purchased ?
+                                                        <Col size='s4'>
+                                                        <label>
+                                                            <input
+                                                                checked= 'checked'
+                                                                name={gift._id}
+                                                                type="checkbox"
+                                                                onChange={this.handleInputCheck}
+                                                            />
+                                                            <span>Purchased</span>
+                                                        </label>
+
+
+                                                    </Col>
+                                                    :
+                                                    <Col size='s4'>
+                                                        <label>
+                                                            <input
+                                                                name={gift._id}
+                                                                type="checkbox"
+                                                                onChange={this.handleInputCheck}
+                                                            />
+                                                            <span> Available</span>
+                                                        </label>
+
+
+                                                    </Col>
+                                                    
+                                                }
+                                                </Row>
+
 
                                             </ListItem>
-                                        </Link>
+
+
+                                        </div>
+
                                     ))}
                                 </List>
 

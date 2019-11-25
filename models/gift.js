@@ -5,7 +5,8 @@ const giftSchema = new Schema({
     gift: { type: String, required: true },
     couple: { type: String, required: true },
     synopsis: String,
-    date: { type: Date, default: Date.now }
+    date: { type: Date, default: Date.now },
+    purchased: {type: Boolean, default: false}
 });
 
 const Gift = mongoose.model("Gift", giftSchema);

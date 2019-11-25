@@ -1,3 +1,9 @@
 strong {
     color:green
 }
+
+.purchased { 
+    text-decoration: line-through red;
+    text-decoration-color: red;
+    color:red;
+}

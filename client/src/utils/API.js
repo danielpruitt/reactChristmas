@@ -5,7 +5,7 @@ export default {
     getGifts: function () {
         return axios.get("/api/gifts");
     },
-    // Gets the book with the given id
+    // Gets the gift with the given id
     getGift: function (id) {
         return axios.get("/api/gifts/" + id);
     },
@@ -19,5 +19,8 @@ export default {
     },
     getCouple: function(couple){
         return axios.get("/api/gifts/" + couple)
+    },
+    updateGift: function(data) { 
+        return axios.put('/api/gifts/'+ data._id, data);
     }
 };
