@@ -247,7 +247,7 @@ class Gifts extends Component {
                                     name="Bridger"
                                     type="checkbox"
                                     onChange={this.handleInputCheck} />
-                                <span>Bridgers</span>
+                                <span>Bridger</span>
                             </label>
                         </Col>
 

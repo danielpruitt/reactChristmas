@@ -26,6 +26,7 @@ import Ethan from "./pages/Ethan";
 import {Navbar} from "./components/Navbar";
 
 import './App.css';
+import Bridger from './pages/Bridger';
 
 const App = () => (
   <Router>
@@ -52,6 +53,7 @@ const App = () => (
         <Route exact path="/Kira" component={Kira}/>
         <Route exact path="/Ethan" component={Ethan}/>
         
+        <Route exact path="/Bridger" component={Bridger}/>
 
         {/* <Route component={NoMatch} /> */}
       </Switch>
