@@ -24,7 +24,7 @@ client.connect(err => {
   // perform actions on the collection object
   client.close();
 });
- mongoose.connect(uri || "mongodb://localhost/christmaslist");
+ mongoose.connect(uri);
 // mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/christmaslist");
 // 
 // Start the API server
