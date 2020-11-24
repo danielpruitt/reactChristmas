@@ -1,5 +1,10 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import {
+  Stitch,
+  AnonymousCredential,
+  RemoteMongoClient
+} from "mongodb-stitch-browser-sdk";
 import Gifts from "./pages/Landing";
 import Detail from "./pages/Detail";
 import Instructions from "./pages/Instructions";
