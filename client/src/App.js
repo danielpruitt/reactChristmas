@@ -41,11 +41,11 @@ const App = () => (
         <Route exact path="/Mima" component={Mima}/>
         <Route exact path="/rachelanddaniel" component={RachelAndDaniel}/>
         <Route exact path="/susanandallan" component={SusanAndAllan}/>
-        <Route exact path="/MaryAndBruce" component={MaryAndBruce}/>
+        {/* <Route exact path="/MaryAndBruce" component={MaryAndBruce}/> */}
         <Route exact path="/CathyAndNick" component={CathyAndNick}/>
         <Route exact path="/ChristellaAndRyan" component={ChristellaAndRyan}/>
         <Route exact path="/TiffanyAndAndrew" component={TiffanyAndAndrew}/>
-        <Route exact path="/MelissaAndBen" component={MelissaAndBen}/>
+        {/* <Route exact path="/MelissaAndBen" component={MelissaAndBen}/> */}
         <Route exact path="/AllisonAndAndrew" component={AllisonAndAndrew}/>
         <Route exact path="/Mattie" component={Mattie}/>
         <Route exact path="/Tess" component={Tess}/>

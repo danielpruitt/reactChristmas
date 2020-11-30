@@ -32,3 +32,6 @@ client.connect(err => {
 app.listen(PORT, function () {
     console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
 });
+
+
+// heroku config:set MONGODB_URI="mongodb+srv://dbUser:dbUser@Cluster0.n9z04.mongodb.net/sample_mflix?retryWrites=true&w=majority"
