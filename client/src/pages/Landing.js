@@ -62,7 +62,6 @@ class Gifts extends Component {
     handleInputCheck = (event) => {
         const target = event.target;
         const name = target.name;
-        console.log(name)
         this.setState({
             couple: name
         });
@@ -132,14 +131,14 @@ class Gifts extends Component {
                                     onChange={this.handleInputCheck} />
                                 <span>Mima</span>
                             </label>
-                            {/* <br />
+                            <br />
                             <label>
                                 <input
                                     name="Mary and Bruce"
                                     type="checkbox"
                                     onChange={this.handleInputCheck} />
                                 <span>Mary and Bruce</span>
-                            </label> */}
+                            </label>
                             <br />
                             <label>
                                 <input
@@ -282,9 +281,9 @@ class Gifts extends Component {
                                 <ListItem >
                                     <Link to={"/Mima"}><strong>Mima</strong> </Link>
                                 </ListItem>
-                                {/* <ListItem>
+                                <ListItem>
                                     <Link to={"/MaryAndBruce"}><strong>Mary and Bruce</strong> </Link>
-                                </ListItem> */}
+                                </ListItem>
                                 <ListItem>
                                     <Link to={"/CathyAndNick"}><strong>Cathy and Nick</strong> </Link>
                                 </ListItem>
