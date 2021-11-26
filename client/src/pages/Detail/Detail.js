@@ -20,7 +20,7 @@ class Detail extends Component {
                     <Col size="s12">
                     
                             <h4>
-                                {this.state.gift.gift} for {this.state.gift.couple}
+                                {this.state.gift.gift} for {this.state.gift.couple == "Kira" ? "Asher": this.state.gift.couple}
                             </h4>
                         
                     </Col>

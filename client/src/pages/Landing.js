@@ -124,13 +124,6 @@ class Gifts extends Component {
                     <Row>
 
                         <Col size="s6">
-                            <label>
-                                <input
-                                    name="Mima"
-                                    type="checkbox"
-                                    onChange={this.handleInputCheck} />
-                                <span>Mima</span>
-                            </label>
                             <br />
                             <label>
                                 <input
@@ -230,7 +223,7 @@ class Gifts extends Component {
                                     name="Kira"
                                     type="checkbox"
                                     onChange={this.handleInputCheck} />
-                                <span>Kira</span>
+                                <span>Asher</span>
                             </label>
                             <br />
                             <label>
@@ -278,9 +271,6 @@ class Gifts extends Component {
                     <Row>
                         <Col size="s4">
                             <List>
-                                <ListItem >
-                                    <Link to={"/Mima"}><strong>Mima</strong> </Link>
-                                </ListItem>
                                 <ListItem>
                                     <Link to={"/MaryAndBruce"}><strong>Mary and Bruce</strong> </Link>
                                 </ListItem>
@@ -325,7 +315,7 @@ class Gifts extends Component {
                                     <Link to={"/Thomas"}><strong>Thomas</strong> </Link>
                                 </ListItem>
                                 <ListItem>
-                                    <Link to={"/Kira"}><strong>Kira</strong> </Link>
+                                    <Link to={"/Kira"}><strong>Asher</strong> </Link>
                                 </ListItem>
                                 <ListItem>
                                     <Link to={"/Ethan"}><strong>Ethan</strong> </Link>

@@ -51,7 +51,7 @@ class Kira extends Component {
                 <Container>
                     <Row>
                         <Col size="s12">
-                            <h3 className="center">Kira</h3>
+                            <h3 className="center">Asher</h3>
                             {this.state.giftList.length ? (
                                 <List>
                                     {this.state.giftList.map(gift => (
