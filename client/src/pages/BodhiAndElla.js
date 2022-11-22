@@ -130,4 +130,4 @@ class BodhiAndElla extends Component {
 
 }
 
-export default Bridger;
+export default BodhiAndElla;
