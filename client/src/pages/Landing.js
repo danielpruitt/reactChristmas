@@ -178,14 +178,14 @@ class Gifts extends Component {
 
                         <Col size="s6">
 
-                            {/* <label>
+                            <label>
                                 <input
                                     name="Melissa and Ben"
                                     type="checkbox"
                                     onChange={this.handleInputCheck} />
                                 <span>Melissa and Ben</span>
                             </label>
-                            <br /> */}
+                            <br />
                             <label>
                                 <input
                                     name="Allison and Andrew"
@@ -241,6 +241,14 @@ class Gifts extends Component {
                                     onChange={this.handleInputCheck} />
                                 <span>Bridger</span>
                             </label>
+                            <br />
+                            <label>
+                                <input
+                                    name="BodhiAndElla"
+                                    type="checkbox"
+                                    onChange={this.handleInputCheck} />
+                                <span>Bodhi and Ella</span>
+                            </label>
                         </Col>
 
                     </Row>
@@ -294,9 +302,9 @@ class Gifts extends Component {
                                 <ListItem>
                                     <Link to={"/TiffanyAndAndrew"}><strong>Tiffany and Andrew</strong> </Link>
                                 </ListItem>
-                                {/* <ListItem>
+                                <ListItem>
                                     <Link to={"/MelissaAndBen"}><strong>Melissa and Ben</strong> </Link>
-                                </ListItem> */}
+                                </ListItem>
                                 <ListItem>
                                     <Link to={"/AllisonAndAndrew"}><strong>Allison and Andrew</strong> </Link>
                                 </ListItem>
@@ -322,6 +330,9 @@ class Gifts extends Component {
                                 </ListItem>
                                 <ListItem>
                                     <Link to={"/Bridger"}><strong>Bridger</strong> </Link>
+                                </ListItem>
+                                <ListItem>
+                                    <Link to={"/BodhiAndElla"}><strong>Bodhi and Ella</strong> </Link>
                                 </ListItem>
                             </List>
                         </Col>
