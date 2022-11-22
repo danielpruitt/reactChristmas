@@ -27,9 +27,13 @@ import {Navbar} from "./components/Navbar";
 
 import './App.css';
 import Bridger from './pages/Bridger';
+import BodhiAndElla from './pages/BodhiAndElla';
 
-const App = () => (
+const App = (couples) => (
+  
+  
   <Router>
+    
     <div>
       <Navbar />
       <br/>
@@ -39,13 +43,14 @@ const App = () => (
         <Route exact path="/gifts/:id" component={Detail} />
         <Route exact path="/instructions" component={Instructions}/>
         {/* <Route exact path="/Mima" component={Mima}/> */}
-        <Route exact path="/rachelanddaniel" component={RachelAndDaniel}/>
+      
+         <Route exact path="/rachelanddaniel" component={RachelAndDaniel}/>
         <Route exact path="/susanandallan" component={SusanAndAllan}/>
         <Route exact path="/MaryAndBruce" component={MaryAndBruce}/>
         <Route exact path="/CathyAndNick" component={CathyAndNick}/>
         <Route exact path="/ChristellaAndRyan" component={ChristellaAndRyan}/>
         <Route exact path="/TiffanyAndAndrew" component={TiffanyAndAndrew}/>
-        {/* <Route exact path="/MelissaAndBen" component={MelissaAndBen}/> */}
+        <Route exact path="/MelissaAndBen" component={MelissaAndBen}/>
         <Route exact path="/AllisonAndAndrew" component={AllisonAndAndrew}/>
         <Route exact path="/Mattie" component={Mattie}/>
         <Route exact path="/Tess" component={Tess}/>
@@ -54,7 +59,9 @@ const App = () => (
         <Route exact path="/Ethan" component={Ethan}/>
         
         <Route exact path="/Bridger" component={Bridger}/>
+        <Route exact path="/BodhiAndElla" component={BodhiAndElla}/>
 
+   
         {/* <Route component={NoMatch} /> */}
       </Switch>
     </div>
