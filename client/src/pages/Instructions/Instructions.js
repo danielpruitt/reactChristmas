@@ -10,10 +10,10 @@ export const Instructions = () => (
                 <Col size="s12">
                     <h4>Instructions:</h4>
                     <h5 className="">
-                        $35 per couple, comment on this post on gifts you would like, and Susan will keep track of what has and has not been purchased so text her about availability. When shopping for Susan and Allan, please let Rachel know what gift you are getting them. 
+                        $40 per couple, comment on this post on gifts you would like.
                     </h5>
-                    <h5>Kids put their normal list. They're excluded from the $35 couple gift.</h5>
-                    <h5> $10 White Elephant as well will be held.</h5>
+                    <h5>Kids put their normal list. They're excluded from the $40 couple gift.</h5>
+                    {/* <h5> $10 White Elephant as well will be held.</h5> */}
                 </Col>
             </Row>
             <br />
