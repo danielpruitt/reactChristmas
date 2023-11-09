@@ -193,14 +193,14 @@ class Gifts extends Component {
                                     onChange={this.handleInputCheck} />
                                 <span>Allison and Andrew</span>
                             </label>
-                            <br />
-                            <label>
+                            {/* <br  /> */}
+                            {/* <label>
                                 <input
                                     name="Mattie"
                                     type="checkbox"
                                     onChange={this.handleInputCheck} />
                                 <span>Mattie</span>
-                            </label>
+                            </label> */}
                             <br />
                             <label>
                                 <input
@@ -308,9 +308,9 @@ class Gifts extends Component {
                                 <ListItem>
                                     <Link to={"/AllisonAndAndrew"}><strong>Allison and Andrew</strong> </Link>
                                 </ListItem>
-                                <ListItem>
+                                {/* <ListItem>
                                     <Link to={"/Mattie"}><strong>Mattie</strong> </Link>
-                                </ListItem>
+                                </ListItem> */}
                             </List>
                         </Col>
 

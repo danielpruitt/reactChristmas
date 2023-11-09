@@ -18,7 +18,7 @@ import RachelAndDaniel from "./pages/RachelAndDaniel";
 import TiffanyAndAndrew from "./pages/TiffanyAndAndrew";
 import MelissaAndBen from "./pages/MelissaAndBen";
 import AllisonAndAndrew from "./pages/AllisonAndAndrew";
-import Mattie from "./pages/Mattie";
+// import Mattie from "./pages/Mattie";
 import Tess from "./pages/Tess";
 import Thomas from "./pages/Thomas";
 import Kira from "./pages/Kira";
@@ -52,7 +52,7 @@ const App = (couples) => (
         <Route exact path="/TiffanyAndAndrew" component={TiffanyAndAndrew}/>
         <Route exact path="/MelissaAndBen" component={MelissaAndBen}/>
         <Route exact path="/AllisonAndAndrew" component={AllisonAndAndrew}/>
-        <Route exact path="/Mattie" component={Mattie}/>
+        {/* <Route exact path="/Mattie" component={Mattie}/> */}
         <Route exact path="/Tess" component={Tess}/>
         <Route exact path="/Thomas" component={Thomas}/>
         <Route exact path="/Kira" component={Kira}/>
